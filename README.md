@@ -162,3 +162,18 @@ pip install -r requirements.txt
 Rồi mở [`CHECKPOINTS.md`](CHECKPOINTS.md) và làm lần lượt Checkpoint 1 → 5.
 
 Nộp theo [`SUBMISSION.md`](SUBMISSION.md) · Quy định: [`RULES.md`](RULES.md).
+
+---
+## Optional Blue prompt tester (CMD / PowerShell)
+
+Run this on your own computer to paste prompts into the same Blue agent and
+Checkpoint 3 guardrails. No web page or network access for classmates is used.
+
+```powershell
+python src/demo/cli.py
+```
+
+Paste a prompt at `Prompt>` and read whether Blue answered, blocked, or redacted
+the result. Enter `/q` or press Ctrl+C to quit. The tester uses the configured
+OpenRouter key from `.env`; requests are limited to 10 per minute. Use fabricated
+examples and never paste real passwords, API keys, or personal information.
